@@ -1,0 +1,357 @@
+/* General Body Settings */
+body {
+  background-color: whitesmoke;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Barra Superior */
+.barraSuperior {
+  margin-left: 18.5%;
+  display: flex;
+  align-items: center;
+  height: 80px;
+  padding: 0 20px;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: whitesmoke;
+  z-index: 1000;
+}
+
+.buscador {
+  display: flex;
+  align-items: center;
+  width: 50%;
+}
+
+.inputBuscar {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 20px 0 0 20px;
+  border: 2px solid #17a589;
+  outline: none;
+}
+
+.btnBuscar {
+  background-color: #17a589;
+  border: none;
+  padding: 5px;
+  border-radius: 0 20px 20px 0;
+  height: 63px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconoBuscar {
+  height: 24px;
+  width: 24px;
+}
+
+.opcionesDerecha {
+  display: flex;
+  align-items: center;
+}
+
+.iconoNotificaciones {
+  height: 24px; /* Ajustado */
+  width: 24px; /* Ajustado */
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.perfil {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.iconoPerfil {
+  height: 30px; /* Ajustado */
+  width: 30px; /* Ajustado */
+  margin-right: 10px;
+}
+
+.textoPerfil {
+  font-size: 16px; /* Ajustado */
+  color: #333;
+}
+
+/* Parte Izquierda */
+.pantallaIzquierda {
+  background-color: white;
+  height: 100vh;
+  width: 320px;
+  position: fixed;
+  top: 0%;
+  left: 0;
+  padding-top: 20px;
+  z-index: 900;
+  overflow-y: auto;
+}
+
+.tituloPantallaIzquierda {
+  padding-left: 15%;
+  color: #17a589;
+  font-size: 30px;
+  font-family: sans-serif, Arial, Helvetica, sans-serif;
+}
+
+.Inicio,
+.boxGeneral {
+  height: 60px; /* Ajustado */
+  width: 270px;
+  background-color: white;
+  padding: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.Inicio:hover,
+.boxGeneral:hover {
+  background-color: #f1f1f1;
+}
+
+.TextoInicio,
+.TextoGeneral {
+  font-size: 18px;
+  font-family: sans-serif, Arial, Helvetica, sans-serif;
+  padding-left: 15px;
+}
+
+.CasaIcon,
+.IconGeneral {
+  height: 24px; /* Ajustado */
+  width: 24px; /* Ajustado */
+  margin-right: 15px;
+}
+
+/* Parte Medio */
+.pantallaMedio {
+  margin-left: 340px;
+  margin-top: 100px;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.tituloPrincipal {
+  font-family: sans-serif, Arial, Helvetica, sans-serif;
+  font-size: 32px; /* Ajustado */
+  margin-bottom: 20px;
+}
+
+.btnAgregarTicket {
+  position: absolute;
+  margin-top: -3%;
+  margin-left: 40%;
+  background-color: #87ceeb;
+  color: white;
+  font-size: 14px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  margin-bottom: 20px; /* Ajustado */
+}
+
+.btnAgregarTicket:hover {
+  background-color: #00bfff;
+}
+
+.btnAgregarTarea {
+  margin-top: -13%;
+  margin-left: 50%;
+  position: absolute;
+  background-color: #87ceeb;
+  color: white;
+  font-size: 14px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  margin-bottom: 20px; /* Ajustado */
+}
+
+.btnAgregarTarea:hover {
+  background-color: #00bfff;
+}
+
+.card-container {
+    display: flex;         /* Usar flexbox para la disposición */
+    flex-wrap: nowrap;     /* No permitir que las tarjetas se envuelvan a la siguiente línea */
+    overflow-x: auto;      /* Añadir scroll horizontal si las tarjetas no caben en el contenedor */
+    margin-top: 20px;      /* Espacio encima del contenedor */
+    padding: 10px;         /* Añadir espacio alrededor del contenedor */
+    gap: 20px;             /* Espacio entre las tarjetas */
+}
+
+.card {
+    flex: 0 0 auto;        /* Mantener el ancho fijo y no permitir que crezca o encoja */
+    width: 300px;          /* Ancho fijo para las tarjetas */
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.iconEspecialistas {
+  height: 50px; /* Ajustado */
+  width: 50px; /* Ajustado */
+  border-radius: 50%;
+  margin-right: 10px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.TextoUsua {
+  font-size: 18px; /* Ajustado */
+  font-weight: bold;
+  margin-top: 10px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.TextoGmail {
+  font-size: 14px; /* Ajustado */
+  color: grey;
+  display: block;
+  margin-top: 5px;
+}
+
+.textoLetra {
+  font-size: 14px; /* Ajustado */
+  color: #333;
+  margin-top: 10px;
+}
+
+.textoCard {
+  font-weight: normal;
+}
+
+.textoError {
+  font-weight: bold;
+  color: red;
+}
+
+.btnAgregarEnable,
+.btnAgregarEnable2 {
+  background-color: #17a589;
+  color: white;
+  font-size: 14px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.btnAgregarEnable2 {
+  background-color: #f39c12;
+}
+
+.btnAgregarEnable:hover,
+.btnAgregarEnable2:hover {
+  background-color: #16a085;
+}
+
+.btnAgregarEnable2:hover {
+  background-color: #e67e22;
+}
+
+/* Parte Derecha */
+.pantallaDerecha {
+  position: fixed;
+  right: 0;
+  top: 80px;
+  height: calc(100vh - 80px);
+  width: 380px;
+  background-color: white;
+  padding: 20px;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+}
+
+.tituloDerecha {
+  font-size: 25px;
+  font-weight: 700;
+  font-family: sans-serif, Arial, Helvetica, sans-serif;
+  margin-bottom: 20px;
+}
+
+.EspecialistasPefil {
+  display: flex;
+  flex-direction: column;
+}
+
+.iconEspecialistas2,
+.iconEspecialistas3 {
+  height: 50px; /* Ajustado */
+  width: 50px; /* Ajustado */
+  border-radius: 50%;
+  margin-right: 10px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.nombreEspecialistas {
+  font-size: 16px; /* Ajustado */
+  margin-bottom: 5px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.Especialidad {
+  font-size: 14px;
+  color: grey;
+  display: block;
+  margin-top: 5px;
+}
+
+.tareas {
+  margin-bottom: 20px;
+}
+
+.dias {
+  font-family: sans-serif, Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.boxReunion,
+.boxReunion2 {
+  margin-bottom: 10px;
+  padding: 15px;
+  background-color: #f3f3f3;
+  border-left: 5px solid;
+}
+
+.boxReunion {
+  border-color: aqua;
+}
+
+.boxReunion2 {
+  border-color: red;
+}
+
+.textoReunion,
+.textoHorario,
+.textoHorario2 {
+  font-family: sans-serif, Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/stylesPrincipal.css" />
+    <title>Pagina Principal</title>
+  </head>
+  <style>
+    .card-container {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      margin-top: 20px;
+      padding: 10px;
+      gap: 20px;
+    }
+    .card {
+      flex: 0 0 auto;
+      width: 300px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+    }
+  </style>
+  <body>
+    <!-- Parte superior (barra de búsqueda y notificaciones) -->
+    <div class="barraSuperior">
+      <div class="buscador">
+        <input type="text" placeholder="Buscar" class="inputBuscar" />
+        <button class="btnBuscar">
+          <img src="/static/img/lupa.png" alt="Buscar" class="iconoBuscar" />
+        </button>
+      </div>
+
+      <div class="opcionesDerecha">
+        <img
+          src="/static/img/campana.png"
+          alt="Notificaciones"
+          class="iconoNotificaciones"
+        />
+        <div class="perfil">
+          <img src="/static/img/usuario.png" alt="Perfil" class="iconoPerfil" />
+          <span class="textoPerfil">Mi perfil</span>
+        </div>
+      </div>
+    </div>
+    <!-- Parte de la izquierda -->
+    <div class="pantallaIzquierda">
+      <div>
+        <h2 class="tituloPantallaIzquierda">Olimpi</h2>
+        <!-- Opciones -->
+
+        <section>
+          <div class="Inicio">
+            <img class="CasaIcon" src="/static/img/casa.png" alt="" />
+            <p class="TextoInicio">Inicio</p>
+          </div>
+        </section>
+
+        <section>
+          <div class="boxGeneral">
+            <img
+              class="IconGeneral"
+              src="/static/img/carro-de-la-carretilla.png"
+              alt=""
+            />
+            <p class="TextoGeneral">Inventario</p>
+          </div>
+        </section>
+
+        <section>
+          <div class="boxGeneral">
+            <img
+              class="IconGeneral"
+              src="/static/img/base-de-datos.png"
+              alt=""
+            />
+            <p class="TextoGeneral">Backups</p>
+          </div>
+        </section>
+
+        <section>
+          <div class="boxGeneral">
+            <img class="IconGeneral" src="/static/img/analitica.png" alt="" />
+            <p class="TextoGeneral">Configuracion</p>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- parte medio -->
+    <div class="pantallaMedio">
+      <section>
+        <div>
+          <h1 class="tituloPrincipal">Tickets Recientes</h1>
+          <button class="btnAgregarTicket">+ Asignar nuevo ticket</button>
+          <div class="card-container">
+            {% for ticket in tickets %}
+            <div class="card">
+              <img
+                class="iconEspecialistas"
+                src="/static/img/ronaldoperfil.jpg"
+                alt=""
+              />
+              <p class="TextoUsua">{{ ticket.sender_name }}</p>
+              <small class="TextoGmail">{{ ticket.sender_email }}</small>
+              <p class="textoLetra textoCard">
+                <b>{{ ticket.subject }}</b><br />
+                {{ ticket.created_at }}
+              </p>
+              <p class="textoLetra textoError">{{ ticket.description }}</p>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- fin parte medio -->
+    <div class="pantallaDerecha">
+      <div>
+        <p class="tituloDerecha">Especialistas</p>
+      </div>
+
+      <!-- especialistas -->
+      <div class="EspecialistasPefil">
+        <section>
+          <img
+            class="iconEspecialistas"
+            src="/static/img/ronaldoperfil.jpg"
+            alt=""
+          />
+          <p class="nombreEspecialistas">Cristiano Ronaldo</p>
+          <br />
+          <small class="Especialidad">Especialista en redes</small>
+        </section>
+
+        <section style="margin-top: 5%">
+          <img
+            class="iconEspecialistas2"
+            src="/static/img/elBicho.jpg"
+            alt=""
+          />
+          <p class="nombreEspecialistas">El bicho</p>
+          <br />
+          <small class="Especialidad">Especialista en Hardware</small>
+        </section>
+
+        <section style="margin-top: 5%">
+          <img
+            class="iconEspecialistas3"
+            src="/static/img/redDemon.jpg"
+            alt=""
+          />
+          <p class="nombreEspecialistas">Red Demon</p>
+          <br />
+          <small class="Especialidad">Especialista en Aplicaciones</small>
+        </section>
+      </div>
+
+      <!-- tareas -->
+      <p class="tituloDerecha">Tareas</p>
+      <button class="btnAgregarTarea">+ Agregar Tarea</button>
+      <section>
+        <div class="tareas">
+          <h2 class="dias">
+            Lun <br />
+            03
+          </h2>
+          <div class="boxReunion">
+            <p class="textoReunion">
+              Copia de seguridad realizadas en <br />
+              pc
+            </p>
+            <p class="textoHorario">09:00 - 10:30</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="tareas">
+          <h2 class="dias">
+            Lun <br />
+            03
+          </h2>
+          <div class="boxReunion2">
+            <p class="textoReunion">Reunion</p>
+            <p class="textoHorario2">17:00 - 18:30</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="tareas">
+          <h2 class="dias">
+            Mie <br />
+            03
+          </h2>
+          <div class="boxReunion">
+            <p class="textoReunion">Reunion</p>
+            <p class="textoHorario">09:00 - 10:30</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
